@@ -20,6 +20,11 @@ RUN chmod 755 /scripts/add-books.sh
 ADD remove-books.sh /scripts/remove-books.sh
 RUN chmod 755 /scripts/remove-books.sh
 
+# Put the sql db in a place where it can be mounted
+RUN mkdir /var/lib/calibre
+RUN mv /usr/share/calibre/metadata_sqlite.sql /var/lib/calibre/metadata_sqlite.sql
+RUN ln -s /var/lib/calibre/metadata_sqlite.sql /usr/share/calibre/metadata_sqlite.sql
+
 # Expose port
 EXPOSE 8080
 
