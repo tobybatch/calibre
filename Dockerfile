@@ -1,5 +1,6 @@
 FROM fedora:25
 MAINTAINER bradley leonard <bradley@leonard.pub>
+MAINTAINER toby batch <tobias@neontribe.co.uk>
 
 # install net-tools, required for serverspec to check ports
 # install calibre
