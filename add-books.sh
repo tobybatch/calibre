@@ -20,7 +20,7 @@ ${CALIBREDB} ${CAL_OPT} --with-library=${LIBNAME} ${DIRNAME} > /dev/null 2>&1
 EC=$?
 if [ $EC -eq 0 ]
 then
-  /bin/rm -rf -- ${DIRNAME}/* > /dev/null 2>&1
+  /bin/mv -rf -- ${DIRNAME}/* /var/tmp/ > /dev/null 2>&1
 fi
 
 if [ -f ${STATUS_FILE} ]
